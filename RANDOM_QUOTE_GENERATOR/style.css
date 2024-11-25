@@ -1,0 +1,83 @@
+.main-container {
+    height: 100vh;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.quote-screen {
+    width: 100%; /* Use 100% width on smaller screens */
+    max-width: 600px; /* Restrict max width for larger screens */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px; /* Add padding for better spacing */
+    background-color: aliceblue;
+    border-radius: 40px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better appearance */
+}
+
+.quote {
+    position: relative; /* Use relative positioning for better alignment */
+    font-size: 24px; /* Reduce font size for smaller devices */
+    color: chocolate;
+    font-weight: bold;
+    word-wrap: break-word; /* Ensure long quotes wrap properly */
+}
+
+.author {
+    position: relative; /* Use relative positioning for alignment */
+    font-size: 20px; /* Adjust font size for smaller screens */
+    color: blue;
+    text-align: right; /* Align to the right for better readability */
+    margin-top: 20px; /* Add space between the quote and author */
+}
+
+.generate-btn {
+    position: relative; /* Avoid fixed positioning for better mobile layout */
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(24, 183, 201);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 100%; /* Full-width button for mobile screens */
+    max-width: 200px; /* Restrict max width for larger screens */
+    margin-left: auto; /* Center align */
+    margin-right: auto;
+}
+
+/* Responsive Design for Smaller Devices */
+@media (max-width: 768px) {
+    .quote {
+        font-size: 20px; /* Smaller font for compact devices */
+    }
+
+    .author {
+        font-size: 16px; /* Reduce font size for authors */
+    }
+
+    .quote-screen {
+        border-radius: 20px; /* Reduce border-radius for smaller screens */
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .quote {
+        font-size: 18px; /* Smaller font size for very small screens */
+    }
+
+    .author {
+        font-size: 14px; /* Reduce font size for authors further */
+    }
+
+    .generate-btn {
+        font-size: 14px; /* Reduce button text size */
+        padding: 8px 20px; /* Adjust button padding */
+    }
+}
